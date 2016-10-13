@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ivy.simplebaidumap.MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定位"
+                android:onClick="startLoc" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公交信息检索"
+                android:onClick="BusRoute" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POI检索-城市检索"
+                android:onClick="PoiCitySearchOption" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热力图功能"
+                android:onClick="HeatMapFunc" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地形图图层"
+                android:onClick="GroundOverlay" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹出窗覆盖物"
+                android:onClick="InfoWindow" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文字覆盖物"
+                android:onClick="textOption" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="折线多段颜色绘制"
+                android:onClick="PolygonOptionsMuil" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="几何图形覆盖物"
+                android:onClick="PolygonOptions" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="底图标注"
+                android:onClick="showMapPoi" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点聚合功能"
+                android:onClick="Cluster" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市热力图"
+                android:onClick="HeatMap" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实时交通图"
+                android:onClick="Traffic" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通地图"
+                android:onClick="normalMap" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卫星地图  "
+                android:onClick="satelliteMap" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空白地图"
+                android:onClick="emptyMap" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加标注"
+                android:onClick="addMarker" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <com.baidu.mapapi.map.MapView
+        android:layout_below="@id/hsv"
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+</RelativeLayout>
